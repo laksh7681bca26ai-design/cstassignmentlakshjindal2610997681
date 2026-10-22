@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Restaurant Menu</title>
+</head>
+<body>
+    <h1>Interactive Restaurant Menu</h1>
+    <p>Click on any food item or area on the table below to explore its details:</p>
+
+    <!-- Sample table image with image map attached -->
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" usemap="#foodmap" alt="Food Spread" width="800" height="500">
+
+    <map name="foodmap">
+        <!-- 2 Circle areas -->
+        <area shape="circle" coords="200,350,60" href="pizza.html" alt="Pizza" target="_blank">
+        <area shape="circle" coords="100,400,50" href="burger.html" alt="Burger" target="_blank">
+
+        <!-- 2 Rect areas -->
+        <area shape="rect" coords="500,300,600,450" href="fries.html" alt="French Fries" target="_blank">
+        <area shape="rect" coords="50,50,200,150" href="menu.html" alt="Menu Card" target="_blank">
+
+        <!-- 2 Poly areas -->
+        <area shape="poly" coords="300,100,350,50,400,120,320,150" href="sandwich.html" alt="Sandwich" target="_blank">
+        <area shape="poly" coords="650,100,720,80,750,150,680,180" href="cake.html" alt="Cake Slice" target="_blank">
+
+        <!-- 1 Default area -->
+        <area shape="default" href="general_info.html" alt="Remaining Area" target="_blank">
+    </map>
+</body>
+</html>

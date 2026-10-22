@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Readers' Haven - Book Registration & Order Form</title>
+</head>
+<body>
+    <h1>Readers' Haven - Book Order Form</h1>
+
+    <form action="submit_order.php" method="POST" target="_blank" enctype="multipart/form-data">
+
+        <!-- Hidden Field -->
+        <input type="hidden" name="form_id" value="Readers Haven Book Order">
+
+        <h3>Customer Details</h3>
+        <p>
+            <label for="cust_name">Customer Name *:</label><br>
+            <input type="text" id="cust_name" name="cust_name" placeholder="John Doe" required>
+        </p>
+
+        <p>
+            <label for="cust_email">Email Address *:</label><br>
+            <input type="email" id="cust_email" name="cust_email" placeholder="john@example.com" required>
+        </p>
+
+        <p>
+            <label for="cust_mobile">Mobile Number *:</label><br>
+            <input type="tel" id="cust_mobile" name="cust_mobile" placeholder="9876543210" required>
+        </p>
+
+        <p>
+            <label for="cust_age">Age:</label><br>
+            <input type="number" id="cust_age" name="cust_age" placeholder="Age" min="10" max="120">
+        </p>
+
+        <p>
+            <label for="cust_pass">Account Password:</label><br>
+            <input type="password" id="cust_pass" name="cust_pass" placeholder="Password">
+        </p>
+
+        <h3>Order & Preference Details</h3>
+        <p>
+            <label for="category">Favorite Book Category *:</label><br>
+            <select id="category" name="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Childrens Books">Children's Books</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="book_title">Book Title:</label><br>
+            <input type="text" id="book_title" name="book_title" placeholder="Enter book title">
+        </p>
+
+        <p>
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" max="50">
+        </p>
+
+        <p>
+            <label for="del_date">Delivery Date:</label><br>
+            <input type="date" id="del_date" name="del_date">
+        </p>
+
+        <p>
+            <label for="del_time">Preferred Delivery Time:</label><br>
+            <input type="time" id="del_time" name="del_time">
+        </p>
+
+        <p>
+            <label>Preferred Payment Method:</label><br>
+            <input type="radio" id="cod" name="payment" value="Cash on Delivery" checked>
+            <label for="cod">Cash on Delivery</label>
+            <input type="radio" id="online" name="payment" value="Online Payment">
+            <label for="online">Online Payment</label>
+        </p>
+
+        <p>
+            <label>Additional Services:</label><br>
+            <input type="checkbox" id="gift" name="services[]" value="Gift Wrapping">
+            <label for="gift">Gift Wrapping</label>
+            <input type="checkbox" id="bookmark" name="services[]" value="Bookmark">
+            <label for="bookmark">Express Delivery</label>
+            <input type="checkbox" id="card" name="services[]" value="Greeting Card">
+            <label for="card">Greeting Card</label>
+        </p>
+
+        <p>
+            <label for="ref_doc">Upload Reference Image/Doc:</label><br>
+            <input type="file" id="ref_doc" name="ref_doc" accept=".png,.jpg,.jpeg,.pdf">
+        </p>
+
+        <p>
+            <label for="delivery_address">Delivery Address & Special Instructions:</label><br>
+            <textarea id="delivery_address" name="delivery_address" rows="4" cols="50" placeholder="Street address, house number, landmarks..."></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Place Order</button>
+            <button type="reset">Reset Form</button>
+        </p>
+    </form>
+</body>
+</html>

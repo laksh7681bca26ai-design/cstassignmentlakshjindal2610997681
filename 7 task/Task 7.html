@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Map Explorer</title>
+</head>
+<body>
+    <h1>World Map Explorer</h1>
+    <p>Hover and click on different countries/regions to open information in a new tab:</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" usemap="#worldmap" alt="World Map" width="800" height="400">
+
+    <map name="worldmap">
+        <!-- Circle shape -->
+        <area shape="circle" coords="400,200,30" href="https://en.wikipedia.org/wiki/Island" alt="Island Region" target="_blank">
+
+        <!-- Rect shape -->
+        <area shape="rect" coords="150,100,300,250" href="https://en.wikipedia.org/wiki/North_America" alt="North America" target="_blank">
+
+        <!-- Poly shape -->
+        <area shape="poly" coords="500,120,600,100,650,220,550,250" href="https://en.wikipedia.org/wiki/Asia" alt="Asia" target="_blank">
+
+        <!-- Default shape -->
+        <area shape="default" href="https://en.wikipedia.org/wiki/Ocean" alt="Oceans and Other Regions" target="_blank">
+    </map>
+</body>
+</html>
